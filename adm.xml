@@ -74,7 +74,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvAdministrador"
         android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_height="170dp"
         android:layout_marginTop="20dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/cvDados"
@@ -96,9 +96,9 @@
                 android:textColor="#4F744A"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.092"
+                app:layout_constraintHorizontal_bias="0.062"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="16dp" />
+                tools:layout_editor_absoluteY="6dp" />
 
             <TextView
                 android:id="@+id/textView"
@@ -108,13 +108,14 @@
                 android:textColor="#9E6897"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.551"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="25dp" />
+                tools:layout_editor_absoluteY="16dp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvEmail"
                 android:layout_width="321dp"
-                android:layout_height="35dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="2dp"
                 app:cardBackgroundColor="#9E6897"
                 app:cardCornerRadius="8dp"
@@ -131,13 +132,40 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvEmail1"
                         android:layout_width="315dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         app:cardBackgroundColor="#ffffff"
                         app:cardCornerRadius="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="1.0">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tvEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email:"
+                                android:textColor="#4F744A"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.014"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:layout_editor_absoluteY="3dp" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="seuemail@gmail.com"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.022"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:layout_editor_absoluteY="19dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -147,7 +175,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvTelefone"
                 android:layout_width="321dp"
-                android:layout_height="35dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="18dp"
                 app:cardBackgroundColor="#9E6897"
                 app:cardCornerRadius="8dp"
@@ -157,13 +185,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/cvEmail">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnEdit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvTelefone1"
                         android:layout_width="315dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         app:cardBackgroundColor="#ffff"
                         app:cardCornerRadius="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -172,6 +201,11 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -183,7 +217,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvDados"
         android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_height="230dp"
         android:layout_marginTop="208dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -191,7 +225,145 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvFoto"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+
+            <TextView
+                android:id="@+id/tvDados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Dados da sua cafeteria"
+                android:textColor="#4F744A"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="321dp"
+                android:layout_height="19dp"
+                android:text="________________________________________________________________"
+                android:textColor="#9E6897"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="27dp" />
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome:"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.054"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="56dp" />
+
+            <TextView
+                android:id="@+id/tvNomeCafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome da sua cafeteria"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toEndOf="@+id/tvNome"
+                tools:layout_editor_absoluteY="56dp" />
+
+            <TextView
+                android:id="@+id/tvCnjp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CNPJ:"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.054"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="82dp" />
+
+            <TextView
+                android:id="@+id/tvCnjpCafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.000/0000-00"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toEndOf="@+id/tvCnjp"
+                tools:layout_editor_absoluteY="82dp" />
+
+            <TextView
+                android:id="@+id/tvEndereço"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereço:"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="101dp" />
+
+            <TextView
+                android:id="@+id/tvEndCafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="84dp"
+                android:text="Rua dos cafés, 123 - Cafezal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvEndereço"
+                tools:layout_editor_absoluteY="101dp" />
+
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#4F744A"
+                android:shadowColor="#8C0E0E"
+                android:text="Editar Perfil"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="#160707"
+                android:textColorLink="#4F994F"
+                android:textStyle="bold"
+                app:cornerRadius="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEndCafe"
+                app:rippleColor="#BCBCBC"
+                app:strokeColor="#9B3A3A" />
+
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="52dp"
+                android:backgroundTint="#4F744A"
+                android:shadowColor="#8C0E0E"
+                android:text="Sair"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="#160707"
+                android:textColorLink="#4F994F"
+                android:textStyle="bold"
+                app:cornerRadius="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEndCafe"
+                app:rippleColor="#BCBCBC"
+                app:strokeColor="#9B3A3A" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
