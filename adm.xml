@@ -104,13 +104,14 @@
                 android:id="@+id/textView"
                 android:layout_width="321dp"
                 android:layout_height="19dp"
+                android:layout_marginTop="16dp"
                 android:text="________________________________________________________________"
                 android:textColor="#9E6897"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintHorizontal_bias="0.517"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvEmail"
@@ -145,26 +146,32 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/tvEmail"
+                                android:id="@+id/tvEmail2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
                                 android:text="Email:"
                                 android:textColor="#4F744A"
                                 android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@+id/textView12"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.014"
+                                app:layout_constraintHorizontal_bias="0.056"
                                 app:layout_constraintStart_toStartOf="parent"
-                                tools:layout_editor_absoluteY="3dp" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
 
                             <TextView
                                 android:id="@+id/textView12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="seuemail@gmail.com"
+                                app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.022"
+                                app:layout_constraintHorizontal_bias="0.088"
                                 app:layout_constraintStart_toStartOf="parent"
-                                tools:layout_editor_absoluteY="19dp" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.615" />
+
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -205,6 +212,31 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
+                            <TextView
+                                android:id="@+id/tvNumero"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Telefone:"
+                                android:textColor="#4F744A"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.056"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(51)999999999"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.083"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.769" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -241,92 +273,103 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintHorizontal_bias="0.083"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.406" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="321dp"
                 android:layout_height="19dp"
+                android:layout_marginTop="16dp"
                 android:text="________________________________________________________________"
                 android:textColor="#9E6897"
                 android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/tvNomeCafe"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintHorizontal_bias="0.448"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="27dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:text="Nome:"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvCnjp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.054"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="56dp" />
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvNomeCafe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:text="Nome da sua cafeteria"
                 android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/tvCnjpCafe"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintHorizontal_bias="0.052"
                 app:layout_constraintStart_toEndOf="@+id/tvNome"
-                tools:layout_editor_absoluteY="56dp" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/tvCnjp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
                 android:text="CNPJ:"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvEndereço"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.054"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="82dp" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvCnjpCafe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
                 android:text="00.000/0000-00"
                 android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/tvEndCafe"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.045"
-                app:layout_constraintStart_toEndOf="@+id/tvCnjp"
-                tools:layout_editor_absoluteY="82dp" />
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toEndOf="@+id/tvCnjp" />
 
             <TextView
                 android:id="@+id/tvEndereço"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="24dp"
                 android:text="Endereço:"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.055"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="101dp" />
+                app:layout_constraintBottom_toTopOf="@+id/btnEditar"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvEndCafe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="84dp"
+                android:layout_marginBottom="112dp"
                 android:text="Rua dos cafés, 123 - Cafezal"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvEndereço"
-                tools:layout_editor_absoluteY="101dp" />
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tvEndereço" />
 
             <Button
                 android:id="@+id/btnEditar"
                 android:layout_width="260dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp"
                 android:backgroundTint="#4F744A"
                 android:shadowColor="#8C0E0E"
                 android:text="Editar Perfil"
@@ -336,9 +379,9 @@
                 android:textColorLink="#4F994F"
                 android:textStyle="bold"
                 app:cornerRadius="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnSair"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvEndCafe"
                 app:rippleColor="#BCBCBC"
                 app:strokeColor="#9B3A3A" />
 
@@ -346,7 +389,6 @@
                 android:id="@+id/btnSair"
                 android:layout_width="260dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="52dp"
                 android:backgroundTint="#4F744A"
                 android:shadowColor="#8C0E0E"
                 android:text="Sair"
@@ -356,9 +398,11 @@
                 android:textColorLink="#4F994F"
                 android:textStyle="bold"
                 app:cornerRadius="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvEndCafe"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.968"
                 app:rippleColor="#BCBCBC"
                 app:strokeColor="#9B3A3A" />
         </androidx.constraintlayout.widget.ConstraintLayout>
