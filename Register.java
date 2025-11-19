@@ -11,6 +11,8 @@ import android.widget.Toast;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import com.example.facilita.UserResponse;
+
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,39 +36,42 @@ public class Register extends AppCompatActivity {
         btnCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("TESTE", "Clique detectado");
-                register();   // 👉 AGORA O MÉTODO É CHAMADO
+                Log.d("CLICK", "clicandooo");
+                register();
             }
         });
     }
 
     private void register() {
 
-        User user = new User();
-        user.setName(edtName.getText().toString());
-        user.setEmail(edtEmail.getText().toString());
-        user.setPassword(edtPassword.getText().toString());
-        user.setPhone(edtPhone.getText().toString());
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("name", edtName.getText().toString())
+                .addFormDataPart("email", edtEmail.getText().toString())
+                .addFormDataPart("password", edtPassword.getText().toString())
+                .addFormDataPart("phone", edtPhone.getText().toString())
+                .addFormDataPart("confirm-password", edtPassword.getText().toString())
+                .addFormDataPart("role", "owner")
+                .build();
 
-        Call<UserResponse> call = RetrofitClient.getInstance().getMyApi().register(user);
+        Call<ResponseBody> call = RetrofitClient.getInstance().getMyApi().register(requestBody);
 
-        call.enqueue(new Callback<UserResponse>() {
+        call.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
-
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(Register.this, response.body().getMessage(), Toast.LENGTH_LONG).show();
-                    Log.d("API", "Usuário cadastrado!");
+                    Toast.makeText(Register.this, "Conta criada com sucesso!", Toast.LENGTH_LONG).show();
                 } else {
-                    Log.e("API_ERROR", "Erro HTTP: " + response.code());
+                    Log.e("API_ERROR", "" + response.code());
                 }
             }
 
             @Override
-            public void onFailure(Call<UserResponse> call, Throwable t) {
-                Log.e("API_ERROR", "Falha: " + t.getMessage());
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e("API_ERROR", "" + t.getMessage());
             }
         });
     }
+
 
 }
